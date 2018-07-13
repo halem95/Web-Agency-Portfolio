@@ -1,0 +1,139 @@
+#pricing {
+
+    padding: 10rem 0rem;
+    background: $grayColor;
+    h2 {
+
+        margin-bottom: 1.5rem;
+    }
+    .orange-br-bottom {
+
+        margin: auto;
+    }
+
+    p {
+
+        color: rgba($blackColor, .5);
+        padding: 1rem 0rem;
+    }
+
+    .pricing-table {
+
+        .table-header {
+
+            background: $blackColor;
+            color: #fff;
+            h4 {
+                padding: 1rem;
+                border-bottom: .15rem solid #fff;
+            }
+            h5 {
+
+                font-style: italic;
+                font-size: 3rem;
+                font-weight: 600;
+                span {
+
+                    font-size: 5rem;
+                    margin-left: .5rem;
+                }
+            }
+            p {
+
+                color: rgba($grayColor, .5);
+                margin-bottom: 0rem;
+                font-weight: 500;
+                @media #{$smallScreen} {
+
+                    margin-top: -.1rem;
+                }
+            }
+        }
+
+        .orange-br-bottom {
+
+            width: 100%;
+            border-bottom: .2rem solid  $orangeColor;
+        }
+
+
+        .table-footer {
+
+            ul {
+
+                background: #fff;
+                color: rgba($blackColor, .5);
+                li {
+
+                    padding: 1rem 0rem;
+                    border-top: .1rem solid $grayColor;
+                    font-weight: 500;
+                    position: relative;
+                    width: 96%;
+                    margin: auto;
+                    display: block;
+                    cursor: pointer;
+                    @include prefixer(transition, all .5s ease-in-out , webkit moz ms);
+                    &:first-of-type {
+
+                        border-top: none;
+                    }
+                    &:before {
+
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -2%;
+                        width: 0%;
+                        background: $orangeColor;
+                        height: 100%;
+                        @include prefixer(transition, all .2s ease-in-out , webkit moz ms);
+                    }
+                    &:after {
+
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: -2.1%;
+                        width: 0%;
+                        background: $orangeColor;
+                        height: 100%;
+                        @include prefixer(transition, all .2s ease-in-out , webkit moz ms);
+                    }
+
+                    &:hover {
+
+                        background: $blackColor;
+                        color: #fff; 
+                        border-top: none;
+                        &:before,
+                        &:after {
+
+                            width: 2%
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+    .professional-table {
+
+        .professional-p {
+
+            background: $orangeColor;
+            color: #fff !important;
+        }
+    }
+
+    .basic-table,
+    .enterprise-table {
+
+        @media #{$smallScreen}, #{$extraSmallScreen} {
+
+            padding-top: 0rem !important;
+        }
+    }
+}

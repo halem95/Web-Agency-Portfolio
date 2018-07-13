@@ -1,0 +1,98 @@
+#about {
+	
+	padding-bottom: 10rem;
+	background-color: $grayColor;
+	padding: 10rem 0rem;
+	.tabs {
+			
+		
+		@media #{$mediumScreen}, #{$smallScreen}, #{$extraSmallScreen} {
+			overflow: hidden;
+			margin-bottom: 2rem;
+		}
+	
+		span.tab-item {
+			
+			display: block;
+			padding: 4rem 2rem;
+			background: $blackColor;
+			color: #fff;
+			text-align: center;
+			border-top: .1rem solid #fff;
+			cursor: pointer;
+			font-weight: 500;
+			@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+			&:hover {
+				
+				background: $orangeColor;
+			}
+			@media #{$mediumScreen} , #{$smallScreen} {
+				
+				float: $float-left;
+				width: (100% / 3);
+				border-right: .1rem solid #fff;
+			}
+	
+			@media #{$extraSmallScreen} {
+				
+				width: 70%;
+				float: none;
+				margin: auto
+			}
+
+		}
+		span.active-tab {
+			
+			background: $orangeColor;
+			color: #fff;
+		}
+	}
+	
+	article {
+		
+		display: none;
+		.content-description {
+			@media #{$extraSmallScreen} {
+				
+				text-align: center;
+				margin-bottom: 2rem;
+			}
+		
+			@media #{$smallScreen} {
+				
+				margin-bottom: 2rem;
+			}
+		
+			p {
+
+				color: rgba($blackColor, .5);
+				font-weight: 500;
+			}
+
+			.content-desc-p-one {
+
+				padding: 2rem 0rem;
+
+
+			}
+
+			.content-desc-p-two {
+
+				padding: 0rem;
+				padding-bottom: 1rem;
+
+			}
+			
+		}
+
+		.content-img {
+			
+			@media #{$extraSmallScreen}, #{$smallScreen} {
+				
+				text-align: center;
+			}
+		}
+		
+	}
+
+}

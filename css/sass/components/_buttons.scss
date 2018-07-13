@@ -1,0 +1,122 @@
+.form-btn {
+	
+	@include Btns;
+	color: $orangeColor;
+	border: .05rem solid $orangeColor;
+	border-radius: .25rem;
+	@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+	&:hover {
+		
+		background: $orangeColor;
+		color: #fff;
+	}
+}
+
+.home-btn {
+	
+	@include Btns;
+	color: #fff;
+	font-weight: 500;
+	border: .17rem solid #fff;
+	border-radius: 0rem !important;
+	display: block;
+	@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+	&:hover {
+		
+		background: $orangeColor;
+		color: #fff;
+		border: .17rem solid $orangeColor;
+	}
+}
+
+.home-form-btn {
+	
+	@include Btns;
+	border-radius: 0rem !important;
+	background: $orangeColor;
+	color: #fff;
+	font-weight: 500;
+	padding: 1rem 0rem;
+	@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+
+	&:focus,
+	&:active {
+		
+		outline: none !important;
+	}
+	&:hover {
+		
+		background: $blackColor;
+	}
+}
+
+
+.about-content-btn {
+	
+	
+	@include Btns;
+	background: $orangeColor;
+	color: #fff;
+	font-weight: 500;
+	@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+	&:hover {
+		
+		background: $blackColor;
+		color: #fff
+	}
+}
+
+.contact-btn {
+
+	@include Btns;
+	background: $orangeColor;
+	color: #fff;
+	font-weight: 500;
+	@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+
+	&:hover {
+
+		background: $blackColor;
+		color: #fff;
+	}
+}
+
+.scrtop {
+
+	width: 2.5rem;
+	height: 2.5rem;
+	color: #fff;
+	background: $orangeColor;
+	border: none;
+	position: fixed;
+	bottom: 2.5rem;
+	right: 2.5rem;
+	z-index: 5555;
+	border-radius: .25rem;
+	cursor: pointer;
+	@include prefixer(animation, translateToTop .8s ease-in-out infinite alternate-reverse, webkit mox ms o);
+	display: none;
+	&:focus {
+
+		outline: none;
+	}
+}
+
+
+
+@include keyFrame(translateToTop) {
+
+	0% {
+
+		bottom: 2.5rem;
+		@include prefixer(box-shadow, 0 0 0 rgba(#000, .5));
+
+	}
+
+	100% {
+
+		bottom: 3.5rem;
+		@include prefixer(box-shadow, 0 .25rem .25rem rgba(#000, .5));
+	}
+
+}

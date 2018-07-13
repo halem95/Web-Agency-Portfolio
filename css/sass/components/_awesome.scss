@@ -1,0 +1,52 @@
+#awesome {
+
+    padding: 5rem 0rem;
+
+    h2 {
+
+        margin-bottom: 1.5rem;
+    }
+
+    .orange-br-bottom {
+
+        margin: auto;
+    }
+
+    p {
+
+        color: rgba($blackColor, .5);
+        padding: 2rem 0rem;
+    }
+
+    .awesome-item {
+
+        padding: 2rem 1rem;
+
+        .awesome-icon {
+
+            display: block;
+            text-align: center;
+            width: 7rem;
+            height: 7rem;
+            margin: auto;
+            margin-bottom: 2rem;
+            border-radius: 50%;
+            border: .2rem solid $orangeColor;
+            cursor: pointer;
+            @include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+            i {
+                line-height: 7rem;
+                color: $orangeColor;
+                @include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+            }
+            &:hover {
+
+                background: $orangeColor;
+                i {
+
+                    color: #fff
+                }
+            }
+        }
+    }
+}

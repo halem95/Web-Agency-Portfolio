@@ -1,0 +1,45 @@
+$extraSmallScreen: '(min-width: 0px) and (max-width: 575px)';
+
+$smallScreen : '(min-width: 576px) and (max-width: 767px)';
+
+$mediumScreen : '(min-width: 768px) and (max-width: 991px)';
+
+$largeScreen : '(min-width: 992px) and (max-width: 1199px)';
+
+$extraLargeScreen: '(min-width: 1200px)';
+
+$orangeColor: #ff8b38;
+
+$blackColor: #333333;
+
+$grayColor: #f5f5f5;
+
+$float-left: left;
+
+$float-right: right;
+
+
+.white-br-bottom {
+	width: 20%;
+	border-bottom: 2px solid #fff;
+}
+
+.orange-br-bottom {
+	width: 20%;
+	border-bottom: 2px solid $orangeColor;
+}
+
+
+.form-control:focus,
+.custom-select:focus  {
+	
+    border-color: $orangeColor !important ;
+    outline: 0;
+    box-shadow: 0 0 .2rem rgba($orangeColor, .5) !important;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+
+	font-family: 'Teko', sans-serif;
+}

@@ -1,0 +1,148 @@
+#sublist {
+
+    padding: 10rem 0rem;
+
+    .sublist-img  {
+
+        position: relative;
+        cursor: pointer;
+
+        .zoom {
+
+            position: absolute;
+            padding: 1rem;
+            z-index: 3;
+            cursor: zoom-in;
+            color: #fff;
+            opacity: 0;
+            @include prefixer(transition, all 1s ease-in-out , webkit moz ms);
+        }
+
+        .overlay {
+
+            @include overlay;
+            background-color: rgba($orangeColor, .7);
+            z-index: 2;
+            opacity: 0;
+            @include prefixer(transition, all 1s ease-in-out , webkit moz ms);
+        }
+
+        %arrow {
+
+            position: absolute;
+            z-index: 3;
+            color: #fff;
+            text-align: center;
+            @include prefixer(transition, all 1s ease-in-out , webkit moz ms);
+            opacity: 0;
+        }
+
+
+        &:hover {
+
+
+            .zoom {
+
+                opacity: 1;
+            }
+
+            .overlay {
+
+                opacity: 1;
+            }
+
+            %arrow {
+
+                opacity: 1;
+            }
+
+        }
+
+        .top-left-arrow {
+
+            top: .5rem;
+            left: .5rem;
+            @extend %arrow;
+
+            i {
+
+                transform: rotate(135deg);
+            }
+        }
+
+        .top-right-arrow {
+
+            top: .5rem;
+            right: .5rem;
+            @extend %arrow;
+    
+            i {
+
+                transform: rotate(-135deg);
+            }
+        }
+
+        .bottom-left-arrow {
+
+            bottom: .5rem;
+            left: .5rem;
+            @extend %arrow;
+           
+            i {
+
+                transform: rotate(45deg);
+            }
+        }
+
+        .bottom-right-arrow {
+
+            bottom: .5rem;
+            right: .5rem;
+            @extend %arrow;
+
+            i {
+
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .sublist-content {
+
+        @media #{$extraSmallScreen} , #{$smallScreen}{
+
+            padding-top: 3rem;
+            
+        }
+
+        h4 {
+
+            margin-bottom: 1rem;
+        }
+
+        p {
+
+            padding: 1.5rem 0rem;
+            color: rgba($blackColor, .5);
+            font-weight: 500;
+        }
+
+        .title {
+
+            .title-icon {
+
+                text-align: center;
+                i {
+
+                    color: $orangeColor;
+                    margin-top: 1rem;
+                }
+                .orange-br-bottom {
+                    width: 30%;
+                    margin: 1rem auto;
+                }
+            }
+        }
+    }
+
+}

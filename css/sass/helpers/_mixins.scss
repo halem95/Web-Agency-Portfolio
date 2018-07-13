@@ -1,0 +1,68 @@
+@mixin overlay {
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	@content;
+}
+
+
+@mixin Btns {
+	
+	background: none;
+	padding: .5rem 2rem;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	&:focus,
+	&:active {
+		
+		outline: none;
+	}
+	@content;
+}
+
+
+@mixin Links {
+	
+	text-decoration: none;
+	@content;
+}
+
+
+@mixin prefixer($property, $val, $prefixes: ()) {
+	
+	@each $prefixe in $prefixes {
+		
+		#{'-' + $prefixe + '-' + $property}: $val;	
+		
+	}
+	
+	
+	#{$property}: $val;
+}
+
+
+
+@mixin keyFrame($animation-name) {
+	
+	@-webkit-keyframes #{$animation-name} {
+		
+		@content;
+		
+	}
+	
+	
+	@-moz-keyframes #{$animation-name} {
+		
+		@content;
+		
+	}
+	
+	
+	
+}

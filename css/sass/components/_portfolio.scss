@@ -1,0 +1,119 @@
+#portfolio {
+
+    padding: 10rem 0rem;
+    background-color: $grayColor;
+    .portfolio-content {
+
+        h4 {
+
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+
+            color: rgba(#000, .5);
+            font-weight: 500;
+        }
+        .port-p-one {
+
+            padding: 1rem 0rem;
+            margin-bottom: 0;
+            
+        }
+
+        
+    }
+
+    .portfolio-gallery {
+
+        height: 400px;
+        position: relative;
+        border-radius: .25rem;
+        overflow: hidden;
+        @media #{$mediumScreen} {
+            height: 300px;
+        }
+        .arrow {
+
+            position: absolute;
+            z-index: 4;
+            top: .5rem;
+            color: $orangeColor;
+            display: block;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+        }
+        .left-arrow {
+
+            left: .5rem;
+        }
+        .right-arrow {
+
+            right: .5rem;
+        }
+        .port-master-img {
+
+            height: 80%;
+            border-bottom: .2rem solid $orangeColor;
+            position: relative;
+            cursor: pointer;
+            
+            .zoom {
+    
+                position: absolute;
+                padding: 1rem;
+                z-index: 3;
+                cursor: zoom-in;
+                color: #fff;
+                opacity: 0;
+                @include prefixer(transition, all 1s ease-in-out , webkit moz ms);
+            }
+    
+            .overlay {
+    
+                @include overlay;
+                background-color: rgba($orangeColor, .8);
+                z-index: 2;
+                opacity: 0;
+                @include prefixer(transition, all 1s ease-in-out , webkit moz ms);
+            }
+    
+            &:hover {
+    
+                .zoom {
+                    opacity: 1;
+                }
+    
+                .overlay {
+    
+                    opacity: 1;
+                }
+            }
+            img {
+
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .port-thumbnails {
+
+            height: 20%;
+            img:not(.active-thumbnail) {
+
+                opacity: .2;
+
+            }
+
+            img {
+
+                cursor: pointer;
+                @include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+                &:hover {
+
+                    opacity: 1
+                }
+            } 
+        }
+    }
+}

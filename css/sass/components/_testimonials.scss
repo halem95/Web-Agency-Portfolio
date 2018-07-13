@@ -1,0 +1,90 @@
+#testimonials {
+
+    padding: 10rem 0rem;
+
+    h2 {
+
+        margin-bottom: 1.5rem;
+    }
+
+    .orange-br-bottom {
+
+        margin: .5rem auto;
+    }
+
+    p {
+
+        color: rgba($blackColor, .5);
+        padding: 1rem 0rem;
+    }
+
+    .container-fluid {
+
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+    }
+    .testimonials-team {
+
+        padding: 4rem 0rem;
+        background-image: url('../images/10.jpg');
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        cursor: move;
+        .overlay {
+    
+            @include overlay {
+    
+                background: rgba(#000, .6);
+            }
+        }
+    
+        .person {
+    
+            padding: 2rem 0rem;
+            color: #fff;
+            @include prefixer(box-shadow, 0 0 .3rem $orangeColor, webkit moz ms);
+            .person-img {
+    
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+                display: block;
+                margin: auto;
+                overflow: hidden;
+                @include prefixer(box-shadow, 0 0 .5rem $orangeColor, webkit moz ms);
+                img {
+    
+                    max-height: 100%;
+                    max-width: 100%;
+    
+                }
+            }
+        }
+    
+        h4, h6 {
+    
+            padding: .5rem 0rem;
+            margin-bottom: 0rem;
+        }
+    
+        h6 {
+    
+            color: $orangeColor;
+            font-weight: 500;
+        }
+    
+        p {
+    
+            padding: 1rem 3rem;
+            color: rgba(#fff, .5);
+            margin-bottom: 0rem;
+            @media #{$smallScreen}, #{$extraSmallScreen} {
+    
+                padding: 1rem .5rem;
+            }
+        }
+    }
+}

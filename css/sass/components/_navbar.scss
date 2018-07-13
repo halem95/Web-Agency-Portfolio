@@ -1,0 +1,195 @@
+nav {
+	
+	background: #000;
+	position: fixed !important;
+	width: 100%;
+	top: 0;
+	left : 0;
+	right: 0;
+	z-index: 555;
+	
+	.navbar-brand {
+		
+		color: #fff !important;
+		font-weight: 500;
+		font-family: 'Teko', sans-serif;
+		font-size: 2rem;
+		letter-spacing: .1rem;
+		&:focus,
+		&:active {
+			
+			outline: none;
+		}
+		span {
+			
+			color: $orangeColor;
+		}
+	}
+
+
+	.navbar-toggler {
+
+		width: 2.5rem;
+		height: 2.5rem;
+		border: .1rem solid #fff !important;
+		padding: 0rem !important;
+		@include prefixer(transition , all .5s ease-in-out, webkit moz ms);
+		span {
+
+			width: 80%;
+			height: .1rem;
+			display: block;
+			background: #fff;
+			margin: .3rem auto;
+			@include prefixer(transition , all .5s ease-in-out, webkit moz ms);
+
+		}
+
+		&:focus {
+
+			outline: none;
+		}
+
+		&:hover {
+
+			border: .1rem solid $orangeColor !important;
+			span {
+
+				background: $orangeColor;
+			}
+		}
+	}
+	
+
+	.navbar-nav {
+
+
+		.nav-link {
+		
+			color: #fff !important;
+			font-weight: 500;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+			&:hover {
+				
+				color: $orangeColor !important;
+				
+			}
+			&:focus,
+			&:active {
+				
+				outline: none;
+			}
+			
+		}
+
+		.nav-link.active-link {
+		
+		
+			color: $orangeColor !important;
+		}
+
+		.search-icon {
+		
+			padding: 1rem;
+			cursor: pointer;
+			display: block;
+			i {
+				
+				color: #fff;
+				@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+				&:hover {
+				
+					color: $orangeColor;
+				
+				}
+			}
+			
+		}
+
+		@media #{$extraSmallScreen}, #{$smallScreen} , #{$mediumScreen} {
+
+			padding: 1rem 0rem;
+
+			.nav-item {
+
+				width: 97%;
+				margin: auto;
+				position: relative;
+				@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+				.nav-link,
+				.search-icon {
+
+					text-align: center;
+					@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+
+				}
+
+				&:before {
+
+					content: "";
+					position: absolute;
+					top: 0;
+					left: -1.5%;
+					height: 100%;
+					width: 0%;
+					background: $orangeColor;
+					@include prefixer(transition, all .2s ease-in-out, webkit moz ms);
+
+				}
+
+				&:after {
+
+					content: "";
+					position: absolute;
+					top: 0;
+					right: -1.5%;
+					height: 100%;
+					width: 0%;
+					background: $orangeColor;
+					@include prefixer(transition, all .2s ease-in-out, webkit moz ms);
+
+				}
+
+				&:hover {
+
+					.nav-link,
+					.search-icon {
+
+						background: rgba(#fff, .5);
+						color: $blackColor !important;
+
+					}
+					.search-icon {
+
+						i {
+
+							color: $blackColor;
+						}
+					}
+
+					&::before{
+
+						width: 1.5%;
+					}
+
+					&:after {
+
+						width: 1.5%;
+					}
+
+				}
+			}
+		}
+
+		
+	}
+	
+	.search-form {
+			
+		display: none;
+	}
+	
+
+}

@@ -1,0 +1,212 @@
+#home {
+	
+	height: 650px;
+	padding: 10rem 0rem;
+	background-image: url('../images/banner.jpg');
+	background-size: 100% 100%;
+	background-position: center;
+	color: #fff;
+	position: relative;
+	#particles-js {
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.home-content {
+		h1 {
+		
+		font-size: 4.5rem;
+			span {
+			
+			color: $orangeColor;
+			}
+		}
+	
+		h2 {
+		
+			padding: 1rem 0rem;
+		}
+	
+	
+		p {
+		
+			padding: 1rem 10rem 1rem 0rem;
+			color: rgba(#fff, .5);
+		}
+	
+		
+	}	
+	
+	.home-form {
+		background: $grayColor;
+		border-radius: .25rem;
+		overflow: hidden;
+		p {
+			
+			color: $blackColor;
+			padding: 1rem 0rem;
+			margin-bottom: 0rem;
+			font-size: 1.5rem;
+			font-weight: 500;
+			span {
+				
+				color: $orangeColor;
+			}
+		}
+		
+		form {
+			background: #fff;
+			padding-top: 2rem;
+			.form-group {
+				
+				padding-left: 1rem;
+				padding-right: 1rem;
+				&:last-of-type {
+						
+					margin-bottom: 3rem;
+				}
+				input {
+					
+					padding: .5rem;
+					border: none;
+					border-bottom: .08rem solid rgba($blackColor, .5);
+					width: 100%;
+					outline: none;
+					&:focus {
+						
+						border-bottom: .08rem solid $orangeColor;
+					}
+				}
+			}
+			.form-group.pass-parent{
+				
+				.eye-icon {
+					
+					display: block;
+					color: $blackColor;
+					text-align: center;
+					padding: .5rem;
+					cursor: pointer;
+					border-bottom: .08rem solid rgba($blackColor, .5);
+					@media #{$smallScreen}, #{extraSmallScreen} {
+						padding: .5rem 0rem;
+					}
+					@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+					i {
+					@include prefixer(transition, all .5s ease-in-out, webkit moz ms);
+					}
+					&:hover {
+						border-bottom: .08rem solid $orangeColor;
+						i {
+							
+							color: $orangeColor;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	@media #{$mediumScreen} {
+		
+		padding: 3rem 0rem;
+		height: 900px;
+		.home-content {
+		
+			h1 {
+
+			font-size: 2.5rem;
+				
+			}
+
+			h2 {
+
+				font-size: 1.5rem;
+			}
+
+
+			p {
+
+				padding: 1rem 4rem 1rem 0rem;
+			}
+
+		
+		}	
+		
+		.home-form {
+			
+			width: 80%;
+			margin-top: 2.5rem;
+		}
+		
+	}
+	@media #{$smallScreen} {
+		
+		padding: 3rem 0rem;
+		height: 900px;
+		.home-content {
+		
+			h1 {
+
+			font-size: 2.5rem;
+				
+			}
+
+			h2 {
+
+				font-size: 1.25rem;
+			}
+
+
+			p {
+
+				padding: 1rem 0rem;
+			}
+
+
+		}	
+		
+		.home-form {
+			
+			width: 100%;
+			margin-top: 2.5rem;
+		}
+	}
+	@media #{$extraSmallScreen} {
+		
+		padding: 3rem 0rem;
+		height: 900px;
+		.home-content {
+		
+			h1 {
+
+			font-size: 2.5rem;
+			
+			}
+
+			h2 {
+
+				font-size: 1.5rem;
+			}
+
+
+			p {
+
+				padding: 1rem 0rem;
+			}
+
+
+		}
+		
+		.home-form {
+			
+			width: 100%;
+			margin-top: 2.5rem;
+		}
+	}
+}

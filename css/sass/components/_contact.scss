@@ -1,0 +1,48 @@
+#contact {
+
+    padding-bottom: 5rem;
+    .orange-br-bottom {
+
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    span {
+
+        font-weight: 500;
+        padding-left: .5rem;
+    }
+
+    iframe {
+
+        border-radius: .25rem;
+        @include prefixer(box-shadow, 0 0 .25rem $orangeColor, webkit mzo ms);
+    }
+
+
+    .form-parent {
+
+        @media #{$extraSmallScreen}, #{$smallScreen} {
+            
+            padding-top: 3rem;
+        }
+        textarea {
+
+            height: 10rem;
+            resize: none;
+           
+        }
+    
+        .message-output {
+    
+            span {
+    
+                font-weight: 500;
+                color: $orangeColor;
+            }
+        }
+    
+
+    }
+    
+}
